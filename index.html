@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header id="title"><h1>Guess the word game</h1></header>
+    <div id="startPage">
+      <button id="startButton">Click Start to play the game</button>
+      <p id="rules">Here are the rules of the game:</p>
+      <ul>
+        <li>You begin with 100 points.</li>
+        <li>
+          Every letter costs 10 points, synonyms and antonyms cost 20 points.
+        </li>
+        <li>Letters are randomized and you may get the same letter again!</li>
+        <li>You need to guess as many words as possible in two minutes.</li>
+        <li>
+          If your score is in top 10 high scores, you'll enter the leaderboard!!
+        </li>
+      </ul>
+    </div>
+    <div id="splitContainer">
+      <div class="gameContainer">
+        <form id="guessForm"></form>
+        <button id="guessButton">Guess</button>
+        <button id="clear">Clear</button>
+        <div id="scoreDisplay">
+          <p id="resultMessage"></p>
+          <div id="timer">Time Remaining: 2:00</div>
+          <div id="score">Score :</div>
+        </div>
+        <div id="hints">
+          <div class="helpDiv">
+            <button id="synButton">Get Synonym</button>
+            <p id="synonym"></p>
+          </div>
+          <div class="helpDiv">
+            <button id="antButton">Get Antonym</button>
+            <p id="antonym"></p>
+          </div>
+          <div class="helpDiv">
+            <button id="getLetterButton">Get Letter</button>
+            <p id="getLetter"></p>
+          </div>
+          <div class="helpDiv">
+            <button id="restartButton">Restart</button>
+          </div>
+        </div>
+      </div>
+      <div id="highScores">High Scores</div>
+    </div>
+    <script type="module" src="app.js" async defer></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+#title {
+  text-align: center;
+  height: 20vh;
+}
+
+.tile {
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: lightgray;
+}
+
+#scoreDisplay {
+  border: 1px solid black;
+  margin: 20px 0;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+#resultMessage {
+  width: 50%;
+  height: 20px;
+}
+#score {
+  width: 50%;
+}
+
+button {
+  font-size: 25px;
+  margin: 5px;
+}
+.helpDiv {
+  display: flex;
+}
+#splitContainer {
+  display: flex;
+}
+.gameContainer {
+  margin: 20px 50px;
+  width: 70%;
+  align-items: center;
+  text-align: center;
+  display: none;
+}
+#highScores {
+  border: 1px solid black;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+  display: none;
+}
+#timer {
+  cursor: pointer;
+  margin: 0 auto;
+}
