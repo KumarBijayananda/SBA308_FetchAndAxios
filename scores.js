@@ -2,6 +2,7 @@ const highScores = document.getElementById("highScores");
 
 export async function getRecord() {
   try {
+    highScores.append("Score Leaderboard!!");
     //get method to get a random word from api
     const response = await axios.get(
       "https://api.restful-api.dev/objects/ff808181932badb601945c4de9c41d71"
@@ -53,7 +54,6 @@ export async function putRecord(names, scores) {
 }
 
 export async function checkHighScore(score) {
-  console.log("high score function trigerred");
   try {
     let placeName = "";
     const names = [];
@@ -69,7 +69,9 @@ export async function checkHighScore(score) {
       names.push(record.data.name[i]);
       scores.push(record.data.score[i]);
       if (score > record.data.score[i]) {
-        if ((place = 0)) place = i + 1;
+        if (place === 0) {
+          place = i + 1;
+        }
       }
     }
     if (place > 0) {

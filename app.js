@@ -7,7 +7,7 @@ const guessButton = document.getElementById("guessButton");
 const clearButton = document.getElementById("clear");
 const resultMessage = document.getElementById("resultMessage");
 const scoreDiv = document.getElementById("score");
-const hints = document.getElementById("hints");
+// const hints = document.getElementById("hints");
 const synButton = document.getElementById("synButton");
 const antButton = document.getElementById("antButton");
 const synonym = document.getElementById("synonym");
@@ -27,15 +27,18 @@ let synArray = [];
 let antArray = [];
 let score = 100;
 
-scores.getRecord();
-
 export async function getGoodWord() {
   guessForm.innerHTML = ""; //clear existing elements in guessForm
   synonym.innerHTML = "";
   antonym.innerHTML = "";
   getLetter.innerHTML = "";
+  highScores.innerHTML = "";
   antButton.disabled = false;
   synButton.disabled = false;
+  guessButton.disabled = false;
+  getLetterButton.disabled = false;
+  clearButton.disabled = false;
+  restartButton.disabled = true;
   antNum = 0;
   synNum = 0;
   synArray = [];
@@ -44,6 +47,7 @@ export async function getGoodWord() {
   //   await getSynonyms();
   displayTiles();
   scoreDiv.textContent = "Score : " + score;
+  scores.getRecord();
 }
 
 async function getRandomWord() {
@@ -222,7 +226,7 @@ async function getSynonyms(wordToGuess) {
   }
 }
 
-function getDefinition() {}
+// function getDefinition() {}
 
 function timer() {
   // Timer duration in seconds (2 minutes)
@@ -253,6 +257,7 @@ function timer() {
       synButton.disabled = true;
       antButton.disabled = true;
       getLetterButton.disabled = true;
+      clearButton.disabled = true;
       restartButton.disabled = false;
     }
   }, 1000);

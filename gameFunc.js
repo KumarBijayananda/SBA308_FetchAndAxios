@@ -1,5 +1,7 @@
 import { getGoodWord } from "./app.js";
 
+const scoreDisplay = document.getElementById("scoreDisplay");
+
 export function clear() {
   const nodeList = guessForm.querySelectorAll(".tile"); //getting node list
   nodeList.forEach((input) => {
@@ -29,10 +31,12 @@ export function validate(userWord, wordToGuess) {
 
   if (userWord === wordToGuess) {
     resultMessage.append("You got it!!");
+    scoreDisplay.style.backgroundColor = "green";
     isCorrect = true;
     getGoodWord();
   } else {
     resultMessage.append("Incorrect try again!");
+    scoreDisplay.style.backgroundColor = "red";
     clear();
   }
   return isCorrect;

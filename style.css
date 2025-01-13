@@ -1,16 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  /* margin: 0; */
+  /* padding: 0; */
+  background-color: #f4f4f9;
+  color: #333;
+}
+
 #title {
   text-align: center;
-  height: 20vh;
+  padding: 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 2rem;
 }
 
 .tile {
-  height: 40px;
-  width: 40px;
-  font-size: 30px;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: lightgray;
+  height: 50px;
+  width: 50px;
+  font-size: 25px;
+  text-align: center;
+  margin: 10px 5px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #e8f5e9;
+}
+
+button[disabled] {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+#startPage {
+  max-width: fit-content;
+  margin: 0 auto;
 }
 
 #scoreDisplay {
@@ -19,19 +42,32 @@
 
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 #resultMessage {
   width: 50%;
-  height: 20px;
+  /* height: 15px; */
 }
 #score {
   width: 50%;
 }
 
 button {
-  font-size: 25px;
-  margin: 5px;
+  font-size: 20px;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
+
+button:hover {
+  background-color: #45a049;
+}
+
 .helpDiv {
   display: flex;
 }
@@ -47,12 +83,21 @@ button {
 }
 #highScores {
   border: 1px solid black;
+  margin: 20px;
   align-items: center;
   text-align: center;
-  width: 30%;
+  width: 25%;
   display: none;
 }
 #timer {
   cursor: pointer;
   margin: 0 auto;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 5px 0;
 }
